@@ -1,0 +1,12 @@
+{
+    "1": {
+        "title": "Naruto",
+        "description": "Ninja bo'lishni orzu qilgan yosh bola haqidagi afsona",
+        "content_file": "contents/naruto.txt"
+    },
+    "2": {
+        "title": "One Piece",
+        "description": "Dengiz qaroqchilari va ulkan xazina izidan",
+        "content_file": "contents/one-piece.txt"
+    }
+}

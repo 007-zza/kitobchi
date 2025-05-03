@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Reader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>Kitobchi</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Kitob qidirish..." oninput="searchManga()">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <nav class="category-nav">
+                <button class="active">Barchasi</button>
+                <button>Yangi</button>
+                <button>Mashhur</button>
+                <button>Sevimli</button>
+            </nav>
+        </header>
+
+        <main>
+            <div id="library" class="section active">
+                <h2>Kutubxona</h2>
+                <div class="manga-grid">
+                    <div class="manga-card">
+                        <div class="manga-card-image" onclick="startReading(1)">
+                            <img src="manga-covers/naruto.jpg" alt="Naruto">
+                        </div>
+                        <h3>Naruto</h3>
+                        <p class="manga-description">Ninja bo'lishni orzu qilgan yosh bola haqidagi afsona</p>
+                        <button onclick="startReading(1)">O'qishni boshlash</button>
+                        <button onclick="startListening(1)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/one-piece.jpg" alt="One Piece">
+                        <h3>One Piece</h3>
+                        <button onclick="startReading(2)">O'qishni boshlash</button>
+                        <button onclick="startListening(2)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/dragon-ball.jpg" alt="Dragon Ball">
+                        <h3>Dragon Ball</h3>
+                        <button onclick="startReading(3)">O'qishni boshlash</button>
+                        <button onclick="startListening(3)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/death-note.jpg" alt="Death Note">
+                        <h3>Death Note</h3>
+                        <button onclick="startReading(4)">O'qishni boshlash</button>
+                        <button onclick="startListening(4)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/attack-on-titan.jpg" alt="Attack on Titan">
+                        <h3>Attack on Titan</h3>
+                        <button onclick="startReading(5)">O'qishni boshlash</button>
+                        <button onclick="startListening(5)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/bleach.jpg" alt="Bleach">
+                        <h3>Bleach</h3>
+                        <button onclick="startReading(6)">O'qishni boshlash</button>
+                        <button onclick="startListening(6)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/my-hero-academia.jpg" alt="My Hero Academia">
+                        <h3>My Hero Academia</h3>
+                        <button onclick="startReading(7)">O'qishni boshlash</button>
+                        <button onclick="startListening(7)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/demon-slayer.jpg" alt="Demon Slayer">
+                        <h3>Demon Slayer</h3>
+                        <button onclick="startReading(8)">O'qishni boshlash</button>
+                        <button onclick="startListening(8)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/tokyo-ghoul.jpg" alt="Tokyo Ghoul">
+                        <h3>Tokyo Ghoul</h3>
+                        <button onclick="startReading(9)">O'qishni boshlash</button>
+                        <button onclick="startListening(9)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen">
+                        <h3>Jujutsu Kaisen</h3>
+                        <button onclick="startReading(10)">O'qishni boshlash</button>
+                        <button onclick="startListening(10)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/black-clover.jpg" alt="Black Clover">
+                        <h3>Black Clover</h3>
+                        <button onclick="startReading(11)">O'qishni boshlash</button>
+                        <button onclick="startListening(11)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/hunter-x-hunter.jpg" alt="Hunter x Hunter">
+                        <h3>Hunter x Hunter</h3>
+                        <button onclick="startReading(12)">O'qishni boshlash</button>
+                        <button onclick="startListening(12)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/one-punch-man.jpg" alt="One Punch Man">
+                        <h3>One Punch Man</h3>
+                        <button onclick="startReading(13)">O'qishni boshlash</button>
+                        <button onclick="startListening(13)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/fullmetal-alchemist.jpg" alt="Fullmetal Alchemist">
+                        <h3>Fullmetal Alchemist</h3>
+                        <button onclick="startReading(14)">O'qishni boshlash</button>
+                        <button onclick="startListening(14)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/sword-art-online.jpg" alt="Sword Art Online">
+                        <h3>Sword Art Online</h3>
+                        <button onclick="startReading(15)">O'qishni boshlash</button>
+                        <button onclick="startListening(15)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/fairy-tail.jpg" alt="Fairy Tail">
+                        <h3>Fairy Tail</h3>
+                        <button onclick="startReading(16)">O'qishni boshlash</button>
+                        <button onclick="startListening(16)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/dragon-ball-super.jpg" alt="Dragon Ball Super">
+                        <h3>Dragon Ball Super</h3>
+                        <button onclick="startReading(17)">O'qishni boshlash</button>
+                        <button onclick="startListening(17)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/black-butler.jpg" alt="Black Butler">
+                        <h3>Black Butler</h3>
+                        <button onclick="startReading(18)">O'qishni boshlash</button>
+                        <button onclick="startListening(18)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/blue-exorcist.jpg" alt="Blue Exorcist">
+                        <h3>Blue Exorcist</h3>
+                        <button onclick="startReading(19)">O'qishni boshlash</button>
+                        <button onclick="startListening(19)">Tinglashni boshlash</button>
+                    </div>
+                    <div class="manga-card">
+                        <img src="manga-covers/assassination-classroom.jpg" alt="Assassination Classroom">
+                        <h3>Assassination Classroom</h3>
+                        <button onclick="startReading(20)">O'qishni boshlash</button>
+                        <button onclick="startListening(20)">Tinglashni boshlash</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- O'qish oynasi -->
+            <div id="reader" class="section">
+                <div class="reader-header">
+                    <button onclick="showSection('library')" class="back-btn">
+                        <i class="fas fa-arrow-left"></i> Orqaga
+                    </button>
+                    <h2 id="mangaTitle"></h2>
+                    <div class="reader-controls">
+                        <button onclick="prevPage()" class="nav-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span id="pageInfo">Sahifa: 1</span>
+                        <button onclick="nextPage()" class="nav-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="mangaPages" class="book-content"></div>
+            </div>
+        </main>
+
+        <footer class="bottom-nav">
+            <button class="nav-btn active" onclick="showSection('library')">
+                <i class="fas fa-home"></i>
+                <span>Asosiy</span>
+            </button>
+            <button class="nav-btn" onclick="showSection('favorites')">
+                <i class="fas fa-heart"></i>
+                <span>Sevimli</span>
+            </button>
+            <button class="nav-btn" onclick="showSection('library')">
+                <i class="fas fa-book"></i>
+                <span>Kutubxona</span>
+            </button>
+            <button class="nav-btn" onclick="showSection('settings')">
+                <i class="fas fa-cog"></i>
+                <span>Sozlamalar</span>
+            </button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
